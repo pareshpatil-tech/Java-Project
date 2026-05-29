@@ -23,15 +23,30 @@ class CardPayment implements Payment {
     }
 }
 
+class CryptoPayment implements Payment {
+    public void pay(double amount) {
+        System.out.println("Crypto Payment Payment Succesfull: "+amount);
+    }
+    public void refund(double amount) {
+        System.out.println("Crypto Payment Refunded Sucesfull: "+amount);
+    }
+}
+
 public class Project10 {
     public static void main(String[] args) {
         UPIPayment upi= new UPIPayment();
         CardPayment card = new CardPayment();
+        CryptoPayment crypto = new CryptoPayment();
 
+        System.out.println("\n-----UPIPayment-----");
         upi.pay(5000);
         upi.refund(3500);
+        System.out.println("\n-----CardPayment-----");
         card.pay(9000);
         card.refund(3000);
+        System.out.println("\n-----CryptoPayment-----");
+        crypto.pay(7000);
+        crypto.refund(2000);
 
         
 
