@@ -1,31 +1,32 @@
 import java.lang.Thread;
 
+//multithreading...
 class SimulatorThread {
     public void run() {
         System.out.println("Downloader");
     }
 }
 
-class MovieDownloader extends Thread{
+class MovieDownloader extends Thread {
     public void run() {
-        for(int i=0;i<5;i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Movies Downloading...");
-            try{
+            try {
                 Thread.sleep(3000);
-            } catch(InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.out.println(e);
             }
         }
     }
 }
 
-class PLayMusic extends Thread{
+class PLayMusic extends Thread {
     public void run() {
-        for(int i=0;i<5;i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Music Playing.....");
-            try{
+            try {
                 Thread.sleep(3000);
-            } catch(InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.out.println(e);
             }
         }
@@ -34,18 +35,18 @@ class PLayMusic extends Thread{
 
 class notification extends Thread {
     public void run() {
-        for(int i=0;i<5;i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Sending notification......");
-            try{
+            try {
                 Thread.sleep(3000);
-            } catch(InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.out.println(e);
             }
         }
     }
 }
 
-public class Project13 {
+public class MultiThreading {
     public static void main(String[] args) {
         MovieDownloader md = new MovieDownloader();
         PLayMusic pm = new PLayMusic();
@@ -55,11 +56,11 @@ public class Project13 {
         pm.start();
         n1.start();
 
-        for(int i=0;i<5;i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Multithreading is starting......");
-            try{
+            try {
                 Thread.sleep(3000);
-            } catch(InterruptedException e) {
+            } catch (InterruptedException e) {
                 System.out.println(e);
             }
         }
@@ -68,7 +69,7 @@ public class Project13 {
             md.join();
             pm.join();
             n1.join();
-        } catch(InterruptedException e) {
+        } catch (InterruptedException e) {
             System.out.println(e);
         }
     }

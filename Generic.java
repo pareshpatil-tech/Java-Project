@@ -19,10 +19,10 @@ class Student {
     }
 }
 
-public class Project11 {
+public class Generic {
     public static void main(String[] args) {
-        //Students REcord System using HashMap
-        HashMap<Integer,Student > student = new HashMap<>();
+        // Students REcord System using HashMap
+        HashMap<Integer, Student> student = new HashMap<>();
         student.put(101, new Student("Paresh Patil", 40, 98));
         student.get(101).displayDetails();
 

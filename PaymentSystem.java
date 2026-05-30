@@ -2,39 +2,43 @@
 
 interface Payment {
     void pay(double amount);
+
     void refund(double amount);
 }
 
 class UPIPayment implements Payment {
     public void pay(double amount) {
-        System.out.println("UPI payment successfull: "+amount);
+        System.out.println("UPI payment successfull: " + amount);
     }
+
     public void refund(double amount) {
-        System.out.println("UPI refunded succesfull: "+amount);
+        System.out.println("UPI refunded succesfull: " + amount);
     }
 }
 
 class CardPayment implements Payment {
     public void pay(double amount) {
-        System.out.println("Card payment successfull: "+amount);
+        System.out.println("Card payment successfull: " + amount);
     }
+
     public void refund(double amount) {
-        System.out.println("Card refunded succesfull: "+amount);
+        System.out.println("Card refunded succesfull: " + amount);
     }
 }
 
 class CryptoPayment implements Payment {
     public void pay(double amount) {
-        System.out.println("Crypto Payment Payment Succesfull: "+amount);
+        System.out.println("Crypto Payment Payment Succesfull: " + amount);
     }
+
     public void refund(double amount) {
-        System.out.println("Crypto Payment Refunded Sucesfull: "+amount);
+        System.out.println("Crypto Payment Refunded Sucesfull: " + amount);
     }
 }
 
-public class Project10 {
+public class PaymentSystem {
     public static void main(String[] args) {
-        UPIPayment upi= new UPIPayment();
+        UPIPayment upi = new UPIPayment();
         CardPayment card = new CardPayment();
         CryptoPayment crypto = new CryptoPayment();
 
@@ -47,8 +51,6 @@ public class Project10 {
         System.out.println("\n-----CryptoPayment-----");
         crypto.pay(7000);
         crypto.refund(2000);
-
-        
 
     }
 }

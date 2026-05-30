@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class  Project07{
+public class StudentManagementSystem {
 
-    //Student Management System
+    // Student Management System
 
     public static void main(String[] args) {
 
@@ -74,17 +74,17 @@ public class  Project07{
                 }
 
             }
-            //DELETE STUDENT
-            else if(choice == 3) {
+            // DELETE STUDENT
+            else if (choice == 3) {
                 System.out.println("Enter roll number to delete:");
                 int deleteRoll = sc.nextInt();
                 boolean deleted = false;
-                for(int i =0 ; i < count; i++) {
-                    if(rolls[i] == deleteRoll) {
-                        for(int j = i; j < count - 1; j++) {
-                            names[j] = names[j+1];
-                            rolls[j] = rolls[j+1];
-                            marks[j] = marks[j+1];
+                for (int i = 0; i < count; i++) {
+                    if (rolls[i] == deleteRoll) {
+                        for (int j = i; j < count - 1; j++) {
+                            names[j] = names[j + 1];
+                            rolls[j] = rolls[j + 1];
+                            marks[j] = marks[j + 1];
                         }
                         count--;
                         deleted = true;
